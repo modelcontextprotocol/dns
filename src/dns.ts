@@ -30,9 +30,8 @@ for (const [domain, records] of Object.entries(DNS_RECORDS)) {
       type: record.type,
       content: record.content,
       ttl: record.ttl ?? 1,
-      proxied: record.proxied ?? false,
+      proxied: false,
       priority: record.priority,
-      comment: record.comment,
     });
   }
 }
