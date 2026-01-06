@@ -1,0 +1,3 @@
+name: mcp-dns
+runtime: nodejs
+description: Infrastructure as Code for MCP DNS management

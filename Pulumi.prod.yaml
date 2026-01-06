@@ -1,0 +1,5 @@
+config:
+  cloudflare:apiToken:
+    secure: v1:Gf79eQjoonySoEro:69bihM9dbe4oN5K9FR2ZaWz8TgQw63f3e+E4pnh+EEkOS0fyUsgglcPWWXp+HEqt+cZmjC/0qig=
+  mcp-dns:cloudflareAccountId: c39d6379ccfdb20a3627eeddffa80ec9
+encryptionsalt: v1:X08GNi1Y/Z4=:v1:FGn4pn2xckU75bKC:xiS5tgANyY/gVHFRUEQC/b5tZK2zHA==
