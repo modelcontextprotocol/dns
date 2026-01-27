@@ -18,6 +18,7 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     // GitHub Pages sites
     { subdomain: 'blog', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
     { subdomain: 'example-client', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
+    { subdomain: 'maintainers', type: 'CNAME', content: 'bookish-train-wrp81zm.pages.github.io' },
     { subdomain: 'static', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
 
     // Other subdomains
