@@ -18,6 +18,7 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     // GitHub Pages sites
     { subdomain: 'blog', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
     { subdomain: 'example-client', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
+    { subdomain: 'maintainers', type: 'CNAME', content: 'bookish-train-wrp81zm.pages.github.io' },
     { subdomain: 'static', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
 
     // Other subdomains
@@ -39,13 +40,25 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     },
 
     // Google site verifications
-    { subdomain: '@', type: 'TXT', content: 'google-site-verification=0jJ1JQ6pdBjRe2r6UCzi2RJbsjvglJUmekPb5rpUQXQ' },
-    { subdomain: '@', type: 'TXT', content: 'google-site-verification=UI0Tjq-ecUgNu3kFATkW87qcabX6kTljsbYjms2-FdQ' },
+    {
+      subdomain: '@',
+      type: 'TXT',
+      content: 'google-site-verification=0jJ1JQ6pdBjRe2r6UCzi2RJbsjvglJUmekPb5rpUQXQ',
+    },
+    {
+      subdomain: '@',
+      type: 'TXT',
+      content: 'google-site-verification=UI0Tjq-ecUgNu3kFATkW87qcabX6kTljsbYjms2-FdQ',
+    },
 
     // Other TXT verifications
     { subdomain: '@', type: 'TXT', content: 'czyymtp25a' },
     { subdomain: '_gh-modelcontextprotocol-o', type: 'TXT', content: '8f29e697fc' },
-    { subdomain: '_github-pages-challenge-modelcontextprotocol.blog', type: 'TXT', content: '1d4b431f4dc23d532fd33da4596bcf' },
+    {
+      subdomain: '_github-pages-challenge-modelcontextprotocol.blog',
+      type: 'TXT',
+      content: '1d4b431f4dc23d532fd33da4596bcf',
+    },
   ],
 };
 
