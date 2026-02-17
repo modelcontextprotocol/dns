@@ -61,10 +61,10 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     },
   ],
   'modelcontextprotocol.net': [
-    { subdomain: '@', type: 'CNAME', content: 'cname.mintlify-dns.com' },
+    { subdomain: '@', type: 'A', content: '76.76.21.21' },
   ],
   'modelcontextprotocol.org': [
-    { subdomain: '@', type: 'CNAME', content: 'cname.mintlify-dns.com' },
+    { subdomain: '@', type: 'A', content: '76.76.21.21' },
   ],
 };
 
