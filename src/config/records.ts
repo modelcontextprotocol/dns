@@ -60,6 +60,12 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
       content: '1d4b431f4dc23d532fd33da4596bcf',
     },
   ],
+  'modelcontextprotocol.net': [
+    { subdomain: '@', type: 'CNAME', content: 'modelcontextprotocol.io' },
+  ],
+  'modelcontextprotocol.org': [
+    { subdomain: '@', type: 'CNAME', content: 'modelcontextprotocol.io' },
+  ],
 };
 
 interface DnsRecordConfig {
