@@ -48,13 +48,13 @@ jobs:
         with:
           credentials_json: ${{ secrets.GCP_PROD_SERVICE_ACCOUNT_KEY }}
 
-      - name: Refresh Pulumi state (one-off fix for out-of-sync state)
+      - name: Delete old CNAME records before creating A records (one-off)
         env:
           PULUMI_PASSPHRASE: ${{ secrets.PULUMI_PROD_PASSPHRASE }}
         run: |
           echo "$PULUMI_PASSPHRASE" > passphrase.prod.txt
           pulumi login gs://mcp-dns-prod-pulumi-state
-          PULUMI_CONFIG_PASSPHRASE_FILE=passphrase.prod.txt pulumi refresh --yes --stack prod
+          PULUMI_CONFIG_PASSPHRASE_FILE=passphrase.prod.txt pulumi destroy --yes --stack prod --target 'urn:pulumi:prod::mcp-dns::cloudflare:index/dnsRecord:DnsRecord::modelcontextprotocol.net-@-CNAME' --target 'urn:pulumi:prod::mcp-dns::cloudflare:index/dnsRecord:DnsRecord::modelcontextprotocol.org-@-CNAME'
 
       - name: Deploy to Production
         env:
