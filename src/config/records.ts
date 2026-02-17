@@ -61,10 +61,10 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     },
   ],
   'modelcontextprotocol.net': [
-    { subdomain: '@', type: 'CNAME', content: 'modelcontextprotocol.io' },
+    { subdomain: '@', type: 'CNAME', content: 'soft-credit-156d.mcp-domain-account.workers.dev' },
   ],
   'modelcontextprotocol.org': [
-    { subdomain: '@', type: 'CNAME', content: 'modelcontextprotocol.io' },
+    { subdomain: '@', type: 'CNAME', content: 'soft-credit-156d.mcp-domain-account.workers.dev' },
   ],
 };
 
