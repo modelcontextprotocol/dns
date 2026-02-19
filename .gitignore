@@ -9,3 +9,4 @@ Pulumi.*.yaml.bak
 # Secrets
 passphrase.prod.txt
 sa-key.json
+.DS_Store
