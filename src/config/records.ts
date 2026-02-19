@@ -39,6 +39,9 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
         'v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtwBNpASgdq3T9tXSFRh3tu9s6bLVBeGtug5Tv5f5D9K2G8n3Ov7KgR8IEyIgWaVuFf+z82NUBtXlDfKRxRu6s9ND+SqPkgVey2IVx4VuHHUJMAC1f4Wst7ZAUmyeo9lf6PpPb7xzr4nSVbN9jbIFDAajsCe+M9TYdkIU9PXdraYpIVc6b+vE7EaiaCdXNWHzIVjo4wFBz4UsNKG1UsO53GZNyXfnxFFPQppaNYEXOfblYtxgW4BhKpBQhT9fC07EKyoUApe2AC8rcX83HBOKKvISR6TbMruv5p82lz1veIcpixRkZfIFDlxMF66yzFs5qdfY8ztRHbri4kw4DVygmwIDAQAB',
     },
 
+    // DMARC
+    { subdomain: '_dmarc', type: 'TXT', content: 'v=DMARC1; p=none; rua=mailto:dmarc-reports@modelcontextprotocol.io' },
+
     // Google site verifications
     {
       subdomain: '@',
