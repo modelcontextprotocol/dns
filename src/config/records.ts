@@ -41,7 +41,11 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     },
 
     // DMARC
-    { subdomain: '_dmarc', type: 'TXT', content: 'v=DMARC1; p=none; rua=mailto:dmarc-reports@modelcontextprotocol.io' },
+    {
+      subdomain: '_dmarc',
+      type: 'TXT',
+      content: 'v=DMARC1; p=none; rua=mailto:dmarc-reports@modelcontextprotocol.io',
+    },
 
     // Google site verifications
     {
@@ -64,12 +68,8 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
       content: '1d4b431f4dc23d532fd33da4596bcf',
     },
   ],
-  'modelcontextprotocol.net': [
-    { subdomain: '@', type: 'A', content: '76.76.21.21' },
-  ],
-  'modelcontextprotocol.org': [
-    { subdomain: '@', type: 'A', content: '76.76.21.21' },
-  ],
+  'modelcontextprotocol.net': [{ subdomain: '@', type: 'A', content: '76.76.21.21' }],
+  'modelcontextprotocol.org': [{ subdomain: '@', type: 'A', content: '76.76.21.21' }],
 };
 
 interface DnsRecordConfig {
