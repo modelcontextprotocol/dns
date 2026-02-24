@@ -20,6 +20,7 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     { subdomain: 'example-client', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
     { subdomain: 'maintainers', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
     { subdomain: 'static', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
+    { subdomain: 'apps.extensions', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
 
     // Other subdomains
     { subdomain: 'example-server', type: 'CNAME', content: 'ghs.googlehosted.com' },
