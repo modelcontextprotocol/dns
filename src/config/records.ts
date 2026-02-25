@@ -26,6 +26,7 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     { subdomain: 'py.sdk', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
     { subdomain: 'java.sdk', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
     { subdomain: 'kotlin.sdk', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
+    { subdomain: 'rust.sdk', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
 
     // Other subdomains
     { subdomain: 'example-server', type: 'CNAME', content: 'ghs.googlehosted.com' },
