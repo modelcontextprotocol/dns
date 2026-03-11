@@ -52,7 +52,7 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     {
       subdomain: '_dmarc',
       type: 'TXT',
-      content: 'v=DMARC1; p=none; rua=mailto:dmarc-reports@modelcontextprotocol.io',
+      content: 'v=DMARC1; p=none',
     },
 
     // Google site verifications
