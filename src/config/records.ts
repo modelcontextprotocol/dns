@@ -70,6 +70,7 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     // Other TXT verifications
     { subdomain: '@', type: 'TXT', content: 'czyymtp25a' },
     { subdomain: '_gh-modelcontextprotocol-o', type: 'TXT', content: '8f29e697fc' },
+    { subdomain: '_gh-modelcontextprotocol-o.go.sdk', type: 'TXT', content: 'e861b8c825' },
     {
       subdomain: '_github-pages-challenge-modelcontextprotocol.blog',
       type: 'TXT',
