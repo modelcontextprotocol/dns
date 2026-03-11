@@ -72,6 +72,7 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     { subdomain: '_gh-modelcontextprotocol-o', type: 'TXT', content: '8f29e697fc' },
     { subdomain: '_gh-modelcontextprotocol-o.go.sdk', type: 'TXT', content: 'e861b8c825' },
     { subdomain: '_gh-modelcontextprotocol-o.csharp.sdk', type: 'TXT', content: 'b47f9ee5f9' },
+    { subdomain: '_gh-modelcontextprotocol-o.java.sdk', type: 'TXT', content: '7be88cc893' },
     { subdomain: '_gh-modelcontextprotocol-o.maintainers', type: 'TXT', content: 'd673ea837a' },
     { subdomain: '_gh-modelcontextprotocol-o.py.sdk', type: 'TXT', content: 'ded07d9023' },
     { subdomain: '_gh-modelcontextprotocol-o.ts.sdk', type: 'TXT', content: '7afda7c066' },
