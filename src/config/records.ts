@@ -66,6 +66,11 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
       type: 'TXT',
       content: 'google-site-verification=UI0Tjq-ecUgNu3kFATkW87qcabX6kTljsbYjms2-FdQ',
     },
+    {
+      subdomain: '@',
+      type: 'TXT',
+      content: 'google-site-verification=FhpMfMf1V9X1n7NSWPcUcb7cKXtUElzM8cbEBm3WXd4',
+    },
 
     // Other TXT verifications
     { subdomain: '@', type: 'TXT', content: 'czyymtp25a' },
