@@ -34,11 +34,8 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     // Other subdomains
     { subdomain: 'example-server', type: 'CNAME', content: 'ghs.googlehosted.com' },
     { subdomain: 'meet', type: 'CNAME', content: 'mcp.meetable.org' },
-    {
-      subdomain: 'guildbridge',
-      type: 'CNAME',
-      content: 'guildbridge.modelcontextprotocol.io.cdn.cloudflare.net',
-    },
+    // guildbridge.modelcontextprotocol.io is managed by a Worker Custom Domain binding
+    // (read-only record, not manageable via DnsRecord)
 
     // MX record for Google Workspace
     { subdomain: '@', type: 'MX', content: 'smtp.google.com', priority: 1 },
