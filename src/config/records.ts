@@ -86,6 +86,7 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     { subdomain: '_gh-modelcontextprotocol-o.maintainers', type: 'TXT', content: 'd673ea837a' },
     { subdomain: '_gh-modelcontextprotocol-o.php.sdk', type: 'TXT', content: '6ae7d8e8ee' },
     { subdomain: '_gh-modelcontextprotocol-o.py.sdk', type: 'TXT', content: 'ded07d9023' },
+    { subdomain: '_gh-modelcontextprotocol-o.ruby.sdk', type: 'TXT', content: 'fd52271418' },
     { subdomain: '_gh-modelcontextprotocol-o.rust.sdk', type: 'TXT', content: 'f8e021d103' },
     { subdomain: '_gh-modelcontextprotocol-o.ts.sdk', type: 'TXT', content: '7afda7c066' },
     {
