@@ -87,6 +87,7 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     { subdomain: '_gh-modelcontextprotocol-o.py.sdk', type: 'TXT', content: 'ded07d9023' },
     { subdomain: '_gh-modelcontextprotocol-o.ruby.sdk', type: 'TXT', content: 'fd52271418' },
     { subdomain: '_gh-modelcontextprotocol-o.rust.sdk', type: 'TXT', content: 'f8e021d103' },
+    { subdomain: '_gh-modelcontextprotocol-o.sdk', type: 'TXT', content: '9469faa78d' },
     { subdomain: '_gh-modelcontextprotocol-o.ts.sdk', type: 'TXT', content: '7afda7c066' },
     {
       subdomain: '_github-pages-challenge-modelcontextprotocol.blog',
