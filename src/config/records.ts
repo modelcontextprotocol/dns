@@ -88,10 +88,19 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     { subdomain: '_gh-modelcontextprotocol-o.rust.sdk', type: 'TXT', content: 'f8e021d103' },
     { subdomain: '_gh-modelcontextprotocol-o.sdk', type: 'TXT', content: '9469faa78d' },
     { subdomain: '_gh-modelcontextprotocol-o.ts.sdk', type: 'TXT', content: '7afda7c066' },
+
+    // GitHub Pages domain verification — protects the domain and its immediate
+    // subdomains from being claimed as a Pages custom domain by accounts outside
+    // this org. Generated under Org Settings → Pages → Add a verified domain.
     {
       subdomain: '_github-pages-challenge-modelcontextprotocol.blog',
       type: 'TXT',
       content: '1d4b431f4dc23d532fd33da4596bcf',
+    },
+    {
+      subdomain: '_github-pages-challenge-modelcontextprotocol.sdk',
+      type: 'TXT',
+      content: '4ef0d3c1056a365f0f01b510350fb6',
     },
   ],
   'modelcontextprotocol.net': [{ subdomain: '@', type: 'A', content: '76.76.21.21' }],
