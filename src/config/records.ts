@@ -9,7 +9,17 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     { subdomain: 'spec', type: 'A', content: '76.76.21.21' },
 
     // Registry
-    { subdomain: 'registry', type: 'CNAME', content: 'prod.registry.modelcontextprotocol.io' },
+    // `registry` is the public API hostname (serves GET /v0/servers). It is
+    // proxied through Cloudflare (orange-cloud) so the edge cache rule defined
+    // in src/cache.ts can absorb read traffic — see registry issue #1323.
+    // `prod.registry` stays DNS-only (grey) so origin/staging remain directly
+    // reachable; the proxied CNAME flattens onto its A record at the edge.
+    {
+      subdomain: 'registry',
+      type: 'CNAME',
+      content: 'prod.registry.modelcontextprotocol.io',
+      proxied: true,
+    },
     { subdomain: 'prod.registry', type: 'A', content: '34.61.200.254' },
     { subdomain: 'staging.registry', type: 'A', content: '35.222.36.75' },
     { subdomain: 'grafana.prod.registry', type: 'A', content: '34.61.200.254' },
@@ -117,4 +127,8 @@ interface DnsRecordConfig {
   content: string;
   ttl?: number;
   priority?: number;
+  // Whether to proxy this record through Cloudflare (orange-cloud). Defaults to
+  // false (DNS-only / grey-cloud). Only proxied records can be cached, have WAF
+  // applied, etc. at the Cloudflare edge.
+  proxied?: boolean;
 }

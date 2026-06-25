@@ -29,8 +29,9 @@ for (const [domain, records] of Object.entries(DNS_RECORDS)) {
       name: record.subdomain,
       type: record.type,
       content: record.content,
+      // Cloudflare requires TTL to be 1 ("automatic") for proxied records.
       ttl: record.ttl ?? 1,
-      proxied: false,
+      proxied: record.proxied ?? false,
       priority: record.priority,
     });
   }
