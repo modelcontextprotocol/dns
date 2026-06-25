@@ -64,7 +64,7 @@ export const registryCacheRuleset = new cloudflare.Ruleset('registry-cache', {
   rules: [
     {
       ref: 'cache_v0_servers',
-      description: 'Cache GET /v0/servers list responses at the edge, keyed by pagination params.',
+      description: 'Cache GET /v0/servers list responses at the edge, keyed by its query params.',
       // Scope narrowly: only the read-heavy list endpoint on the registry host,
       // GET only. Detail routes (/v0/servers/{name}) and writes are untouched.
       expression: `(http.host eq "${REGISTRY_HOST}" and http.request.method eq "GET" and http.request.uri.path eq "/v0/servers")`,
@@ -80,14 +80,21 @@ export const registryCacheRuleset = new cloudflare.Ruleset('registry-cache', {
           // be served from the edge. value 0 == "no-cache".
           statusCodeTtls: [{ statusCodeRange: { from: 400, to: 599 }, value: 0 }],
         },
-        // Build the cache key from only the pagination params so each page
-        // caches as a distinct entry, while unknown/tracking query params don't
-        // fragment the cache (or let an attacker blow past it with junk params).
+        // Build the cache key from exactly the query params that change the
+        // /v0/servers response body, so each distinct page/filter caches as its
+        // own entry — while unknown/tracking params don't fragment the cache (or
+        // let someone blow past it with junk params). These mirror the endpoint's
+        // ListServersInput: cursor, limit (paging) plus the search/version/
+        // updated_since/include_deleted filters. Keep this list in sync if the
+        // registry adds new query params, otherwise responses that differ only by
+        // a new param would be incorrectly served from the same cache entry.
         cacheKey: {
           ignoreQueryStringsOrder: true,
           customKey: {
             queryString: {
-              include: { lists: ['cursor', 'limit'] },
+              include: {
+                lists: ['cursor', 'limit', 'search', 'version', 'updated_since', 'include_deleted'],
+              },
             },
           },
         },
