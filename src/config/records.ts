@@ -38,6 +38,8 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     { subdomain: 'tasks.extensions', type: 'CNAME', content: 'ext-tasks.pages.dev' },
     // guildbridge.modelcontextprotocol.io is managed by a Worker Custom Domain binding
     // (read-only record, not manageable via DnsRecord)
+    // securityroom.modelcontextprotocol.io is managed by a Worker Custom Domain binding
+    // (modelcontextprotocol/security-room; read-only record, not manageable via DnsRecord)
 
     // MX record for Google Workspace
     { subdomain: '@', type: 'MX', content: 'smtp.google.com', priority: 1 },
