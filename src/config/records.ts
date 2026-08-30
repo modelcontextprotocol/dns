@@ -36,6 +36,9 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     { subdomain: 'meet', type: 'CNAME', content: 'mcp.meetable.org' },
     // MCP Tasks Extension docs, hosted on Cloudflare Pages (modelcontextprotocol/ext-tasks)
     { subdomain: 'tasks.extensions', type: 'CNAME', content: 'ext-tasks.pages.dev' },
+    // MCP Server Card Extension docs, hosted on Cloudflare Pages (modelcontextprotocol/ext-server-card)
+    { subdomain: 'server-card.extensions', type: 'CNAME', content: 'server-card.pages.dev' },
+    https://github.com/modelcontextprotocol/ext-server-card
     // guildbridge.modelcontextprotocol.io is managed by a Worker Custom Domain binding
     // (read-only record, not manageable via DnsRecord)
     // securityroom.modelcontextprotocol.io is managed by a Worker Custom Domain binding
