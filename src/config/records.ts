@@ -21,6 +21,7 @@ export const DNS_RECORDS: Record<string, DnsRecordConfig[]> = {
     { subdomain: 'maintainers', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
     { subdomain: 'static', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
     { subdomain: 'apps.extensions', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
+    { subdomain: 'skills.extensions', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
     { subdomain: 'ts.sdk', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
     { subdomain: 'csharp.sdk', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
     { subdomain: 'go.sdk', type: 'CNAME', content: 'modelcontextprotocol.github.io' },
